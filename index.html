@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="locomotive.css">  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="nav">
+        <h1>:_______________________________________________________________________________</h1>
+    </div>
+    <div id="cursor"></div>     <!--A id as bubble cursor visible on about page and page 4 -->
+    <div id="goll"></div>    <!--A id for a following mouse pointer on webpage -->
+    <div id="main">
+        <div id="page1">
+            <h1> Tranquil <br> Tints Gallery</h1>
+            <div id="video-container">
+                 <video autoplay loop muted src="images/pexels-anthony-shkraba-7986423 (1080p).mp4"></video>
+            </div>
+        </div>
+        <div id="about">   <!--About page with scrollspeed-->
+            <h3 data-scroll data-scroll-speed="0.8">About Us</h3>
+                <p>The peaceful and artistic atmosphere of Tranquil Tints Gallery is a celebration of colour and creativity.<br>
+                 Tucked away in the centre of artistic creativity, we cordially welcome you to enter a realm of entrancing colours and mesmerising canvases.</p>
+            <h3 data-scroll data-scroll-speed="0.8">Our Story</h3>
+               <p>Our journey at Tranquil Accents Gallery started with a straightforward yet profound belief: art has the ability to elevate emotions and change spaces.<br>
+                 When we founded [year], we had one goal in mind: to create a collection that speaks to the peace that art can offer us.</p>
+            <h3 data-scroll data-scroll-speed="0.8">Art Solutions</h3>
+               <p>Are you looking to add a little artistic flare to your home or workspace? At Tranquil Tints Gallery,<br> our staff provides personalised art solutions based on your tastes.
+                 Whether it's choosing the ideal item from our inventory or placing a custom art order,<br> we're committed to assisting you in realising your creative vision.</p>
+        </div>
+        <div id="page2">     <!--top collection of paintings put on as sliders with buttons -->
+            <img class="slides" src="images/pexels-steve-johnson-1269968.jpg" height="400" width="800" alt="">
+             <img class="slides" src="images/pexels-w-w-889839.jpg" height="400" width="800" alt="">
+            <img class="slides" src="images/pexels-pixabay-164455.jpg" height="400" width="800" alt="">
+             <img class="slides" src="images/pexels-dids-3826338.jpg" height="400" width="800" alt="">
+            <img class="slides" src="images/pexels-daniel-ap-795693.jpg" height="400" width="800" alt="">
+             <img class="slides" src="images/pexels-steve-johnson-1145720.jpg" height="400" width="800" alt="">
+        </div>
+        <div id="text">
+            <h2>Top Collection</h2>
+        </div>
+        <div id="button">   <!--buttons for next and prev-->
+            <button onclick="goPrev()"><</button>
+            <button onclick="goNext()">></button>
+        </div>
+        <div id="page3">      <!--paintings with artist and scrollspeed-->
+            <div id="pic1" class="pic">
+                <img data-scroll data-scroll-speed="0.8" src="images/pexels-robin-schreiner-2261165.jpg" alt="">
+                <div data-scroll data-scroll-speed="-1"class="box">artist: Henri</div>
+            </div>
+            <div id="pic2" class="pic">
+                <img data-scroll data-scroll-speed="0.8" src="images/pexels-darya-sannikova-1671014.jpg" alt="">
+                <div data-scroll data-scroll-speed="-1"class="box">artist: Vermeer</div>
+            </div>
+            <div id="pic3" class="pic">
+                <img data-scroll data-scroll-speed="0.8" src="images/pexels-dom-j-297494.jpg" alt="">
+                <div data-scroll data-scroll-speed="-1"class="box">artist: Jackson</div>
+            </div>
+        </div>
+        <div id="page5">
+            <div id="content5">
+                <h2>Proud Parnters</h2>
+                <img src="images/Screenshot_2023-12-26_160632-removebg-preview.png" width="800">
+            </div>
+        </div>
+        <div id="page4">    <!--can be called as info page with scrollspeed-->
+            <div class="square" id="sqr1">
+                <p>When making a painting, composition, colour theory, and technique must all be carefully considered.
+                     To express what they want to say or inspire particular feelings, artists carefully consider the brushstrokes they use,
+                      colour schemes they use, and general design of their work.</p>
+            </div>
+            <div class="square" id="sqr2">
+                <img data-scroll data-scroll-speed="0.8" src="images/pexels-pixabay-262034.jpg"  alt="">
+            </div>
+            <div class="square" id="sqr3">
+                <img data-scroll data-scroll-speed="0.8" src="images/pexels-ylanite-koppens-697673.jpg" alt="">
+            </div>
+            <div class="square" id="sqr4">
+               <p>The chance to exhibit the variety of painting subjects, styles, and methods.
+                 Galleries help create a more inclusive image of the art world by showcasing artists from many countries and backgrounds.
+                 links between various artists, periods, or styles, promoting a more thorough comprehension of the art globe.</p>
+            </div>
+        </div>
+       <footer> 
+         <div class="footer_info">
+           <div class="footer_width about ">
+                <h2>Tranquil Tints Gallery</h2>
+                <p>For ages, painting and other forms of art have been essential components of human civilization,
+                 acting as a medium for expression, dialogue, and historical reflection.</p>
+                 <!--social icons-->
+               <div class="social">
+                  <ul>
+                    <li><a href="#"><i class="ri-facebook-circle-fill"></i></a></li>
+                    <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+                    <li><a href="#"><i class="ri-twitter-x-fill"></i></a></li>
+                  </ul>
+               </div>
+           </div>
+           <div class="footer_width link">
+            <!--names of popular artist-->
+             <h2>Famous Artist.</h2>
+                <ul>
+                   <li>.Salvador Dali.</li>
+                   <li>.Picasso.</li>
+                   <li>.Monet.</li>
+                   <li>.Van Gogh.</li>
+                </ul>
+           </div>
+            <div class="footer_width contact">
+                <!--contact details-->
+             <h2>Contact</h2>
+                <ul>
+                   <li>
+                     <span><i class="ri-map-pin-fill"></i></span>
+                     <p>location</p>
+                   </li>
+                   <li>
+                      <span><i class="ri-mail-fill"></i></span>
+                      <a href="#">TranquilTintsGallery@gmail.com</a>
+                   </li>
+                   <li>
+                      <span><i class="ri-cellphone-fill"></i></span>
+                      <a href="#">000 999 222 55</a>
+                   </li>
+                   <li>
+                    <a href="#">VISIT US.</a>
+                   </li>
+                </ul>
+            </div>
+        </div>
+        <div id="copy">
+            <p><span>&#169</span>COPYRIGHT 2023 ARTGALLERY ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>

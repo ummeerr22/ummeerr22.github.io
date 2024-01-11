@@ -1,0 +1,881 @@
+* {
+    margin : 0%;
+    padding : 0%;
+    box-sizing : border-box;
+    }
+    *::selection {
+    color : white;
+    background-color : black;
+    }
+    html, body {
+    height : 100%;
+    width : 100%;
+    }
+    body {
+    background-color : rgb(240, 240, 240);
+    }
+    #nav {
+    height : 50px;
+    width : 100%;
+    }
+    #cursor {
+    height : 75px;
+    width : 75px;
+    background-color : grey;
+    border-radius : 50%;
+    position : fixed;
+    transform : translate(-50%,-50%) scale(0);
+    }
+    #goll {
+    transition : 0.5s cubic-bezier(0.19,1,0.22,1);
+    width : 10px;
+    height : 10px;
+    z-index : 99999;
+    position : absolute;
+    border-radius : 50%;
+    background-color : black;
+    }
+    #page1 {
+    min-height : 100vh;
+    position : relative;
+    width : 100%;
+    padding : 0 1vw;
+    padding-top : 30vh;
+    }
+    #page1 h1 {
+    font-size : 22vh;
+    text-transform : uppercase;
+    line-height : 20vh;
+    letter-spacing : -2px;
+    }
+    #video-container {
+    height : 100vh;
+    width : 100%;
+    background-color : grey;
+    margin-top : 1vw;
+    position : relative;
+    }
+    #video-container video {
+    height : 100vh;
+    width : 100%;
+    object-fit : cover;
+    opacity : 1;
+    }
+    #about {
+    height : 60vh;
+    width : 100%;
+    margin : auto;
+    margin-top : 100px;
+    padding : 3vw 1vw;
+    }
+    #about h3 {
+    text-align : center;
+    font-size : 25px;
+    opacity : 70%;
+    text-shadow : 1px 1px 1px;
+    text-decoration : none;
+    }
+    #about p {
+    text-align : center;
+    padding : 15px;
+    }
+    #page2 {
+    height : 80vh;
+    width : 60%;
+    margin : auto;
+    margin-top : 100px;
+    box-shadow : 0 0 3px gray;
+    position : relative;
+    overflow : hidden;
+    }
+    .slides {
+    width : 100%;
+    height : 100vh;
+    transition : 1s;
+    position : absolute;
+    }
+    #text {
+    text-align : center;
+    margin-top : 15px;
+    opacity : 60%;
+    }
+    #button {
+    text-align : center;
+    margin-top : 15px;
+    }
+    #button button {
+    font-size : 25px;
+    padding : 5px;
+    margin-bottom : 50px;
+    background-color : black;
+    color : gray;
+    }
+    #button button:hover {
+    background-color : white;
+    }
+    #page3 {
+    height : 100vh;
+    width : 100%;
+    position : relative;
+    display : flex;
+    align-items : center;
+    justify-content : space-between;
+    padding : 3vw 1vw;
+    color : white;
+    }
+    #page3 .pic {
+    height : 100%;
+    width : 30%;
+    overflow : hidden;
+    position : relative;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    }
+    #page3 .pic img {
+    height : 100%;
+    width : 100%;
+    object-fit : cover;
+    }
+    #page3 .pic .box {
+    height : 40px;
+    width : 70%;
+    position : absolute;
+    z-index : 9;
+    border-radius : 50px;
+    background-color : pink;
+    opacity : 60%;
+    }
+    #page3 .box {
+    padding : 11px;
+    padding-left : 60px;
+    text-transform : uppercase;
+    color : black;
+    }
+    #page4 {
+    min-height : 120vh;
+    width : 100%;
+    position : relative;
+    display : flex;
+    align-items : center;
+    justify-content : space-evenly;
+    flex-wrap : wrap;
+    }
+    .square {
+    height : 54vh;
+    width : 38vw;
+    position : relative;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    }
+    .square img {
+    padding : 15px;
+    height : 100%;
+    border-radius : 25px;
+    opacity : 85%;
+    }
+    .square p {
+    font-size : 17px;
+    }
+    #page5 {
+    height : 50vh;
+    padding : 60px;
+    text-align : center;
+    }
+    a {
+    text-decoration : none;
+    transition : 0.5s;
+    color : black;
+    }
+    ul li {
+    list-style-type : none;
+    }
+    footer {
+    background : linear-gradient(rgb(240, 240, 240), black);
+    color : black;
+    height : 75vh;
+    }
+    .footer_info {
+    width : 90%;
+    margin : 0 auto;
+    display : flex;
+    padding : 50px;
+    }
+    .footer_info .footer_width {
+    padding : 0 40px;
+    }
+    .footer_info h2 {
+    margin-bottom : 20px;
+    }
+    .about .contact {
+    width : 40%;
+    }
+    .link {
+    width : 30%;
+    }
+    .social {
+    margin-top : 65px;
+    }
+    .social ul {
+    display : flex;
+    }
+    .social ul li a {
+    display : inline-block;
+    margin-right : 50px;
+    width : 40px;
+    height : 40px;
+    padding-top : 9px;
+    background-color : transparent;
+    border : white solid 2px;
+    text-align : center;
+    }
+    .social ul li a:hover {
+    background-color : white;
+    color : black;
+    }
+    .link ul li {
+    display : flex;
+    margin-bottom : 15px;
+    font-size : 17px;
+    font-weight : bolder;
+    }
+    .contact ul li {
+    display : flex;
+    align-items : center;
+    margin-bottom : 16px;
+    }
+    .contact ul li span {
+    margin-right : 15px;
+    }
+    #copy {
+    padding : 20px;
+    text-align : center;
+    background-color : black;
+    color : white;
+    }
+
+
+
+
+    /*mobile*/
+    @media (min-width:411px) and (max-width:731px) and (min-height:915px){
+        #nav {
+        height : 50px;
+        width : 100%;
+        }
+        #page1 {
+        min-height : 80vh;
+        width : 100%;
+        padding : 0 3vw;
+        padding-top : 30vh;
+        }
+        #page1 h1 {
+        font-size : 8vh;
+        line-height : 8vh;
+        letter-spacing : -3px;
+        }
+        #video-container {
+        height : 32vh;
+        margin-top : 3vw;
+        }
+        #video-container video {
+        height : 32vh;
+        width : 100%;
+        object-fit : cover;
+        opacity : 1;
+        }
+        #about {
+        height : 50vh;
+        width : 100%;
+        margin : auto;
+        margin-top : 50px;
+        }
+        #about h3 {
+        text-align : center;
+        font-size : 25px;
+        }
+        #about p {
+        text-align : center;
+        padding : 15px;
+        }
+        #page2 {
+        height : 25vh;
+        width : 100%;
+        margin : auto;
+        margin-top : 100px;
+        box-shadow : 0 0 3px gray;
+        position : relative;
+        overflow : hidden;
+        }
+        .slides {
+        width : 100%;
+        height : 25vh;
+        transition : 1s;
+        position : absolute;
+        }
+        #text {
+        text-align : center;
+        margin-top : 20px;
+        opacity : 60%;
+        }
+        #button {
+        text-align : center;
+        margin-top : 15px;
+        }
+        #button button {
+        font-size : 30px;
+        padding : 5px;
+        margin-bottom : 50px;
+        background-color : black;
+        color : gray;
+        }
+        #button button:hover {
+        background-color : white;
+        }
+        #page3 {
+        height : 250vh;
+        width : 100%;
+        position : relative;
+        display : flex;
+        align-items : center;
+        flex-direction : column;
+        padding : 5vw 3vw;
+        justify-content : space-between;
+        }
+        #page3 .pic {
+        height : 100vh;
+        width : 100%;
+        overflow : hidden;
+        margin-bottom : 4vh;
+        }
+        #page3 .pic img {
+        height : 100%;
+        width : 100%;
+        object-fit : cover;
+        }
+        .pic .box {
+        height : 40px;
+        width : 70%;
+        position : absolute;
+        z-index : 9;
+        border-radius : 50px;
+        background-color : pink;
+        }
+        #page4 {
+        height : 70vh;
+        width : 100%;
+        position : relative;
+        display : flex;
+        align-items : center;
+        justify-content : space-evenly;
+        flex-wrap : wrap;
+        }
+        .square {
+        height : 25vh;
+        width : 88vw;
+        position : relative;
+        padding : 11vw;
+        display : flex;
+        align-items : center;
+        justify-content : center;
+        }
+        .square img {
+        display : inline-block;
+        height : 32vh;
+        width : 150%;
+        }
+        .square p {
+        width : 75%;
+        }
+        #page5 {
+        height : 20vh;
+        padding : 60px;
+        text-align : center;
+        }
+        #content5 img {
+        width : 110%;
+        }
+        footer {
+        color : black;
+        height : 95vh;
+        }
+        .footer_info {
+        width : 90%;
+        margin : 0 auto;
+        display : inline-block;
+        padding : 20px;
+        }
+        .footer_info .footer_width {
+        padding : 20px;
+        }
+        .footer_info h2 {
+        margin-bottom : 25px;
+        }
+        .social {
+        margin-top : 30px;
+        }
+        .social ul li a {
+        margin-right : 75px;
+        width : 60px;
+        height : 40px;
+        padding-top : 12px;
+        border : white solid 1px;
+        }
+        .contact ul li {
+        display : flex;
+        align-items : center;
+        margin-bottom : 17px;
+        color : darkgray;
+        }
+        .contact ul li span {
+        margin-right : 15px;
+        color : darkgray;
+        }
+        .contact ul li a {
+        color : darkgray;
+        }
+        #copy {
+        padding : 20px;
+        text-align : center;
+        background-color : gray;
+        color : black;
+        }
+        }
+      
+
+
+        /*ipad*/
+        @media (min-width: 768px) and (max-width:1024px) {
+            #nav {
+            height : 70px;
+            width : 100%;
+            }
+            #page1 {
+            min-height : 80vh;
+            width : 100%;
+            padding : 0 3vw;
+            padding-top : 30vh;
+            }
+            #page1 h1 {
+            font-size : 9vh;
+            font-weight : bolder;
+            line-height : 9vh;
+            letter-spacing : -3px;
+            }
+            #video-container {
+            width : 170%;
+            height : 60vh;
+            margin-top : 3vw;
+            }
+            #video-container video {
+            height : 60vh;
+            width : 100%;
+            object-fit : cover;
+            opacity : 1;
+            }
+            #about {
+            height : 50vh;
+            width : 165%;
+            margin : auto;
+            margin-top : 120px;
+            }
+            #about h3 {
+            text-align : center;
+            font-size : 45px;
+            }
+            #about p {
+            text-align : center;
+            padding : 15px;
+            font-size : 30px;
+            }
+            #page2 {
+            height : 50vh;
+            width : 150%;
+            margin-left : 65px;
+            margin-top : 270px;
+            box-shadow : 0 0 3px gray;
+            position : relative;
+            overflow : hidden;
+            }
+            .slides {
+            width : 100%;
+            height : 50vh;
+            transition : 1s;
+            position : absolute;
+            }
+            #text {
+            text-align : end;
+            font-size : 30px;
+            margin-top : 20px;
+            opacity : 60%;
+            }
+            #button {
+            margin-left : 500px;
+            margin-top : 15px;
+            }
+            #button button {
+            font-size : 50px;
+            padding : 5px;
+            margin-bottom : 50px;
+            background-color : black;
+            color : gray;
+            }
+            #button button:hover {
+            background-color : white;
+            }
+            #page3 {
+            height : 250vh;
+            width : 165%;
+            position : relative;
+            display : flex;
+            align-items : center;
+            flex-direction : column;
+            padding : 2vw 3vw;
+            justify-content : space-between;
+            }
+            #page3 .pic {
+            height : 100vh;
+            width : 100%;
+            overflow : hidden;
+            margin-bottom : 4vh;
+            }
+            #page3 .pic img {
+            height : 100%;
+            width : 100%;
+            object-fit : cover;
+            }
+            #page3 .pic .box {
+            height : 50px;
+            width : 25%;
+            position : absolute;
+            font-size : 25px;
+            z-index : 9;
+            border-radius : 50px;
+            background-color : pink;
+            }
+            #page4 {
+            height : 50vh;
+            width : 170%;
+            margin-top : 100px;
+            position : relative;
+            display : flex;
+            align-items : center;
+            justify-content : space-evenly;
+            flex-wrap : wrap;
+            }
+            .square {
+            height : 25vh;
+            width : 170%;
+            position : relative;
+            padding : 11vw;
+            display : flex;
+            }
+            .square img {
+            height : 32vh;
+            width : 250%;
+            }
+            .square p {
+            width : 170%;
+            font-size : 30px;
+            }
+            #page5 {
+            height : 20vh;
+            padding : 60px;
+            text-align : end;
+            font-size : 25px;
+            }
+            #content5 img {
+            width : 180%;
+            }
+            footer {
+            color : black;
+            height : 120vh;
+            width : 170%;
+            }
+            .footer_info {
+            width : 100%;
+            margin : 0 auto;
+            display : inline-block;
+            padding : 50px;
+            font-size : 35px;
+            }
+            .footer_width ul li {
+            font-size : 35px;
+            }
+            .footer_info .footer_width {
+            padding : 40px;
+            }
+            .footer_info h2 {
+            margin-bottom : 30px;
+            font-size : 40px;
+            }
+            .social {
+            margin-top : 25px;
+            }
+            .social ul li a {
+            margin-right : 75px;
+            width : 70px;
+            height : 80px;
+            padding-top : 12px;
+            border : white solid 1px;
+            font-size : 50px;
+            }
+            .contact ul li {
+            display : flex;
+            align-items : center;
+            margin-bottom : 17px;
+            color : darkgray;
+            font-size : 30px;
+            }
+            .contact ul li span {
+            margin-right : 15px;
+            color : darkgray;
+            font-size : 30px;
+            }
+            .contact ul li a {
+            color : darkgray;
+            font-size : 30px;
+            }
+            #copy {
+            padding : 20px;
+            font-size : 30px;
+            text-align : center;
+            background-color : gray;
+            color : black;
+            }
+            }
+
+
+
+
+    /*laptop*/
+    @media (min-width: 1025px) and (max-width:1440px) and (min-height:900px) {
+        #page1 {
+        min-height : 100vh;
+        position : relative;
+        width : 100%;
+        padding : 0 1vw;
+        padding-top : 30vh;
+        }
+        #page1 h1 {
+        font-size : 18vh;
+        text-transform : uppercase;
+        line-height : 17vh;
+        letter-spacing : -2px;
+        }
+        #video-container {
+        height : 90vh;
+        width : 100%;
+        background-color : grey;
+        margin-top : 1vw;
+        position : relative;
+        }
+        #video-container video {
+        height : 90vh;
+        width : 100%;
+        object-fit : cover;
+        opacity : 1;
+        }
+        #about {
+        height : 60vh;
+        width : 100%;
+        margin : auto;
+        margin-top : 90px;
+        padding : 3vw 1vw;
+        }
+        #about h3 {
+        text-align : center;
+        font-size : 25px;
+        opacity : 70%;
+        text-shadow : 1px 1px 1px;
+        text-decoration : none;
+        font-size : 32px;
+        }
+        #about p {
+        text-align : center;
+        padding : 15px;
+        font-size : 25px;
+        }
+        #page2 {
+        height : 70vh;
+        width : 95%;
+        margin : auto;
+        margin-top : 100px;
+        box-shadow : 0 0 3px gray;
+        position : relative;
+        overflow : hidden;
+        }
+        .slides {
+        width : 100%;
+        height : 100vh;
+        transition : 1s;
+        position : absolute;
+        }
+        #text {
+        text-align : center;
+        margin-top : 15px;
+        opacity : 60%;
+        font-size : 28px;
+        }
+        #button {
+        text-align : center;
+        margin-top : 15px;
+        }
+        #button button {
+        font-size : 35px;
+        padding : 10px;
+        margin-bottom : 50px;
+        background-color : black;
+        color : gray;
+        }
+        #button button:hover {
+        background-color : white;
+        }
+        #page3 {
+        height : 100vh;
+        width : 100%;
+        position : relative;
+        display : flex;
+        align-items : center;
+        justify-content : space-between;
+        padding : 3vw 1vw;
+        color : white;
+        }
+        #page3 .pic {
+        height : 100%;
+        width : 33%;
+        overflow : hidden;
+        position : relative;
+        display : flex;
+        align-items : center;
+        justify-content : center;
+        }
+        #page3 .pic img {
+        height : 100%;
+        width : 100%;
+        object-fit : cover;
+        }
+        #page3 .pic .box {
+        height : 40px;
+        width : 70%;
+        position : absolute;
+        z-index : 9;
+        border-radius : 50px;
+        background-color : pink;
+        opacity : 60%;
+        }
+        #page3 .box {
+        padding : 11px;
+        padding-left : 60px;
+        text-transform : uppercase;
+        color : black;
+        }
+        #page4 {
+        min-height : 120vh;
+        width : 100%;
+        position : relative;
+        display : flex;
+        align-items : center;
+        justify-content : space-evenly;
+        flex-wrap : wrap;
+        }
+        .square {
+        height : 54vh;
+        width : 38vw;
+        position : relative;
+        display : flex;
+        align-items : center;
+        justify-content : center;
+        }
+        .square img {
+        padding : 20px;
+        height : 100%;
+        border-radius : 30px;
+        opacity : 85%;
+        }
+        .square p {
+        font-size : 27px;
+        }
+        #page5 {
+        height : 50vh;
+        padding : 60px;
+        text-align : center;
+        }
+        #content5 h2 {
+        font-size : 32px;
+        }
+        #content5 img {
+        width : 80%;
+        }
+        footer {
+        background : linear-gradient(rgb(240, 240, 240), black);
+        color : black;
+        height : 70vh;
+        }
+        .footer_info {
+        width : 90%;
+        margin : 0 auto;
+        display : flex;
+        padding : 50px;
+        }
+        .footer_info .footer_width {
+        padding : 70px;
+        font-size : 20px;
+        }
+        .footer_info h2 {
+        margin-bottom : 20px;
+        }
+        .about .contact {
+        width : 40%;
+        }
+        .link {
+        width : 30%;
+        }
+        .social {
+        margin-top : 65px;
+        }
+        .social ul {
+        display : flex;
+        }
+        .social ul li a {
+        display : inline-block;
+        margin-right : 50px;
+        width : 40px;
+        height : 50px;
+        padding-top : 9px;
+        background-color : transparent;
+        border : white solid 2px;
+        text-align : center;
+        font-size : 25px;
+        }
+        .social ul li a:hover {
+        background-color : white;
+        color : black;
+        }
+        .link ul li {
+        display : flex;
+        margin-bottom : 15px;
+        font-size : 17px;
+        font-weight : bolder;
+        font-size : 20px;
+        }
+        .contact ul li {
+        display : flex;
+        align-items : center;
+        margin-bottom : 16px;
+        font-size : 20px;
+        }
+        .contact ul li span {
+        margin-right : 15px;
+        }
+        #copy {
+        margin-top : 10px;
+        padding : 20px;
+        text-align : center;
+        background-color : black;
+        color : white;
+        font-size : 20px;
+        }
+        
+        }
